@@ -36,6 +36,30 @@
       "type": "shell",
       "command": "echo \"Open @agents/prompts/scout.md in Cursor Chat/Composer\"",
       "problemMatcher": []
+    },
+    {
+      "label": "Atlas: pipeline status",
+      "type": "shell",
+      "command": "python3 scripts/pipeline_automation.py status",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: pipeline guide",
+      "type": "shell",
+      "command": "python3 scripts/pipeline_automation.py guide",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: pipeline validate",
+      "type": "shell",
+      "command": "python3 scripts/pipeline_automation.py validate",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: pipeline advance",
+      "type": "shell",
+      "command": "python3 scripts/pipeline_automation.py advance",
+      "problemMatcher": []
     }
   ]
 }

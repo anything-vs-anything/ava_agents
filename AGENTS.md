@@ -39,6 +39,21 @@ Cursor does not ship a built-in cron for Composer. Practical automation:
 2. **Tasks** — `.vscode/tasks.json` defines one task per phase; run **Terminal → Run Task** and pick e.g. **Atlas: cycle status** or **Atlas: open Scout prompt**.
 3. **Scheduled prep on macOS** — `scripts/com.atlas.cycle.plist.example` + `scripts/install_launchd.sh` install a daily job that runs `run_atlas_cycle.py tick` (bumps schedule, ensures folders). It **does not** call external APIs or post anywhere; it keeps the workspace ready for your Cursor session.
 
+### Pipeline automation helper
+
+Use `scripts/pipeline_automation.py` for local orchestration guardrails:
+
+- `python3 scripts/pipeline_automation.py status` — run/phase + current artifact status
+- `python3 scripts/pipeline_automation.py guide` — which prompt to attach and what file to produce
+- `python3 scripts/pipeline_automation.py validate` — verify current phase output exists
+- `python3 scripts/pipeline_automation.py advance` — move to next phase only when checks pass
+
+`advance` blocks at `human_review` until you explicitly run:
+
+- `python3 scripts/run_atlas_cycle.py human-ok`
+
+This keeps human posting authority explicit and non-automated.
+
 ## Source document
 
 Canonical spec: `agentic_seeding_master_prompt_revised_final.pdf` (also summarized in `docs/agentic_seeding_master_prompt.md`).
