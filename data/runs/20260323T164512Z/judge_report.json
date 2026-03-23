@@ -1,0 +1,29 @@
+{
+  "run_id": "20260323T164512Z",
+  "generated_at": "2026-03-23T16:46:30Z",
+  "summary": {
+    "approved_count": 0,
+    "watchlist_count": 2,
+    "rejected_count": 0
+  },
+  "ranked_candidates": [
+    {
+      "name": "r/buildapc",
+      "classification": "Risky",
+      "decision": "watchlist",
+      "reason": "Promising debate structure, but this run lacks live moderation/rule verification."
+    },
+    {
+      "name": "X AI tooling debate cluster",
+      "classification": "Risky",
+      "decision": "watchlist",
+      "reason": "Anchor is valid as a method, but concrete account/community verification is missing."
+    }
+  ],
+  "top_strikes": [],
+  "watchlist": [
+    "r/buildapc",
+    "X AI tooling debate cluster"
+  ],
+  "notes": "Demonstration run only; no Elite/Good approvals without live evidence."
+}

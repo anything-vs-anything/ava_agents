@@ -1,0 +1,33 @@
+{
+  "run_id": "20260323T164718Z",
+  "generated_at": "2026-03-23T16:51:25Z",
+  "ranked_candidates": [
+    {
+      "name": "r/buildapc",
+      "classification": "Good",
+      "decision": "approved",
+      "reason": "Live thread shows high argument density and concrete compare behavior."
+    },
+    {
+      "name": "r/NFL_Draft",
+      "classification": "Good",
+      "decision": "approved",
+      "reason": "Live thread shows sustained binary preference debate and defendable positions."
+    },
+    {
+      "name": "X AI tool comparison cluster",
+      "classification": "Risky",
+      "decision": "watchlist",
+      "reason": "X evidence remains unverified in this run; requires direct human validation."
+    }
+  ],
+  "top_strikes": [
+    "r/buildapc"
+  ],
+  "watchlist": [
+    "r/NFL_Draft",
+    "X AI tool comparison cluster"
+  ],
+  "rejections": [],
+  "notes": "Approvals are limited to candidates with directly verifiable public evidence in this environment."
+}

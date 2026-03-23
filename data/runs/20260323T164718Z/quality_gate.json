@@ -1,0 +1,32 @@
+{
+  "run_id": "20260323T164718Z",
+  "generated_at": "2026-03-23T16:53:45Z",
+  "result": "pass_with_fixes",
+  "checks": [
+    {
+      "name": "native_tone",
+      "status": "pass",
+      "note": "Prompts mirror observed debate structures in verified threads."
+    },
+    {
+      "name": "stakes_and_depth",
+      "status": "pass",
+      "note": "Both prompts drive explicit tradeoff reasoning."
+    },
+    {
+      "name": "duplicate_topic_risk",
+      "status": "warning",
+      "note": "Both targets regularly host similar debates; enforce recency check."
+    },
+    {
+      "name": "source_verification",
+      "status": "warning",
+      "note": "Reddit verified live; X only partially verified this run."
+    }
+  ],
+  "required_fixes_before_posting": [
+    "Re-check community rules and weekly thread policies.",
+    "Confirm no near-duplicate thread in the last 48-72 hours.",
+    "If posting to X, gather direct live post anchors first."
+  ]
+}

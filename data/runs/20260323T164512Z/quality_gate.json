@@ -1,0 +1,32 @@
+{
+  "run_id": "20260323T164512Z",
+  "generated_at": "2026-03-23T16:47:45Z",
+  "result": "conditional_pass",
+  "checks": [
+    {
+      "name": "native_tone",
+      "status": "pass",
+      "note": "Prompt is community-specific and concrete."
+    },
+    {
+      "name": "stakes_and_depth",
+      "status": "pass",
+      "note": "Clear tradeoff invites defensible positions."
+    },
+    {
+      "name": "duplicate_topic_risk",
+      "status": "warning",
+      "note": "Hardware matchups are common; confirm novelty on live scan."
+    },
+    {
+      "name": "grounding_quality",
+      "status": "warning",
+      "note": "Run used simulated data; requires human live validation."
+    }
+  ],
+  "required_fixes_before_posting": [
+    "Verify subreddit posting rules and title format.",
+    "Check for near-duplicate threads in recent posts.",
+    "Confirm topic is timely and non-fatigued."
+  ]
+}

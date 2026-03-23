@@ -1,0 +1,30 @@
+{
+  "run_id": "20260323T164512Z",
+  "community": "r/buildapc",
+  "source_platform": "reddit",
+  "profile_confidence": "low",
+  "style_profile": {
+    "tone": [
+      "practical",
+      "technical",
+      "value-sensitive"
+    ],
+    "preferred_structure": [
+      "clear constraints",
+      "specific part lists",
+      "direct recommendation requests"
+    ]
+  },
+  "debate_primitives": [
+    "price-to-performance",
+    "future-proofing tradeoff",
+    "brand preference arguments"
+  ],
+  "triggers": [
+    "new hardware releases",
+    "budget threshold posts"
+  ],
+  "cautions": [
+    "verify subreddit rules and allowed post formats before any posting"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "run_id": "20260323T164512Z",
+  "generated_at": "2026-03-23T16:47:25Z",
+  "prompts": [
+    {
+      "prompt_id": "smith-001",
+      "target": "r/buildapc",
+      "title": "Budget Build Debate: RX 7800 XT vs RTX 4070 for 1440p in 2026?",
+      "body": "Assume a fixed total build budget and similar local pricing. Which card gives the better real-world value this year, and why?",
+      "first_comment": "Please include use case, power/noise concerns, and upgrade horizon in your argument.",
+      "risk_notes": [
+        "Needs live subreddit rule check for allowed post type.",
+        "Use neutral framing to avoid brand-war baiting."
+      ],
+      "duplicate_risk": "medium"
+    }
+  ],
+  "notes": "Drafted from simulated context profile; must be reviewed against current platform norms."
+}

@@ -1,0 +1,132 @@
+{
+  "run_id": "20260323T164718Z",
+  "generated_at": "2026-03-23T16:50:40Z",
+  "candidates": [
+    {
+      "name": "r/buildapc",
+      "source_platform": "reddit",
+      "source_anchor": "r/buildapc thread evidence",
+      "url_or_id": "https://www.reddit.com/r/buildapc/comments/1rswv1f/best_gpu_to_buy_at_every_budget_in_2026_price_to/",
+      "primary_category": "technology",
+      "signals": [
+        "Explicit budget-tier comparison request",
+        "High-volume replies defending competing GPU choices",
+        "Multiple A vs B recommendations (e.g., 9070 XT vs 5070 Ti)"
+      ],
+      "context_pack": {
+        "recent_themes": [
+          "price/performance GPU debates",
+          "budget-tier recommendation frameworks"
+        ],
+        "controversy_patterns": [
+          "NVIDIA vs AMD value claims",
+          "new vs used purchase strategy"
+        ],
+        "popular_entities": [
+          "RTX 5070 Ti",
+          "RX 9070 XT",
+          "RX 7800 XT"
+        ],
+        "debate_topics": [
+          "best GPU by budget tier",
+          "value vs feature set tradeoff"
+        ],
+        "matchup_types": [
+          "GPU A vs GPU B within fixed budget"
+        ],
+        "tone_indicators": [
+          "technical",
+          "opinionated",
+          "evidence-heavy replies"
+        ],
+        "slang_or_cultural_signals": [
+          "price-to-performance",
+          "bang for buck"
+        ]
+      },
+      "viability": "viable",
+      "viability_reason": "Live thread demonstrates active argument culture and concrete compare behavior."
+    },
+    {
+      "name": "r/NFL_Draft",
+      "source_platform": "reddit",
+      "source_anchor": "r/NFL_Draft thread evidence",
+      "url_or_id": "https://www.reddit.com/r/NFL_Draft/comments/1r373ou/mansoor_delane_or_jermod_mccoy_as_cb1/",
+      "primary_category": "sports",
+      "signals": [
+        "Binary player-comparison framing in title",
+        "Sustained disagreement over ceiling vs safety",
+        "Injury-risk argument used as decision criterion"
+      ],
+      "context_pack": {
+        "recent_themes": [
+          "prospect ranking debates",
+          "risk-adjusted draft preferences"
+        ],
+        "controversy_patterns": [
+          "upside vs reliability",
+          "injury concern weighting"
+        ],
+        "popular_entities": [
+          "Mansoor Delane",
+          "Jermod McCoy"
+        ],
+        "debate_topics": [
+          "CB1 ranking",
+          "how much to discount injuries"
+        ],
+        "matchup_types": [
+          "Prospect A vs Prospect B"
+        ],
+        "tone_indicators": [
+          "argumentative",
+          "scouting-analytic"
+        ],
+        "slang_or_cultural_signals": [
+          "CB1",
+          "ceiling vs floor"
+        ]
+      },
+      "viability": "viable",
+      "viability_reason": "Live thread content shows clear debate ritual and repeatable matchup framing."
+    },
+    {
+      "name": "X AI tool comparison cluster",
+      "source_platform": "x",
+      "source_anchor": "search pattern: site:x.com + ai coding + vs + thread",
+      "url_or_id": "x-pattern-20260323-ai-vs-001",
+      "primary_category": "technology",
+      "signals": [
+        "Comparison intent present in search-derived references"
+      ],
+      "context_pack": {
+        "recent_themes": [
+          "AI coding tool comparisons"
+        ],
+        "controversy_patterns": [
+          "speed vs quality",
+          "cost vs capability"
+        ],
+        "popular_entities": [
+          "Cursor",
+          "Copilot",
+          "Claude"
+        ],
+        "debate_topics": [
+          "best coding assistant"
+        ],
+        "matchup_types": [
+          "Tool vs tool"
+        ],
+        "tone_indicators": [
+          "hot takes"
+        ],
+        "slang_or_cultural_signals": [
+          "ship fast"
+        ]
+      },
+      "viability": "uncertain",
+      "viability_reason": "Direct live X post retrieval could not be verified in this environment; human live validation required."
+    }
+  ]
+}
