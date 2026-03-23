@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Atlas: new run",
+      "type": "shell",
+      "command": "python3 scripts/run_atlas_cycle.py new-run",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: cycle status",
+      "type": "shell",
+      "command": "python3 scripts/run_atlas_cycle.py status",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: tick",
+      "type": "shell",
+      "command": "python3 scripts/run_atlas_cycle.py tick",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: set phase (scout)",
+      "type": "shell",
+      "command": "python3 scripts/run_atlas_cycle.py set-phase scout",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: human ok",
+      "type": "shell",
+      "command": "python3 scripts/run_atlas_cycle.py human-ok",
+      "problemMatcher": []
+    },
+    {
+      "label": "Atlas: open Scout prompt",
+      "type": "shell",
+      "command": "echo \"Open @agents/prompts/scout.md in Cursor Chat/Composer\"",
+      "problemMatcher": []
+    }
+  ]
+}

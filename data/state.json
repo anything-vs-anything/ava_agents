@@ -1,0 +1,18 @@
+{
+  "run_id": null,
+  "phase": "idle",
+  "phases": [
+    "atlas_plan",
+    "scout",
+    "judge",
+    "context_extractor",
+    "smith",
+    "quality_gate",
+    "human_review",
+    "sentinel",
+    "atlas_learn"
+  ],
+  "human_cleared": false,
+  "last_tick": null,
+  "notes": "Run `python3 scripts/run_atlas_cycle.py new-run` to start a cycle."
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ScoutDiscoveries",
+  "type": "object",
+  "required": ["run_id", "generated_at", "candidates"],
+  "properties": {
+    "run_id": { "type": "string" },
+    "generated_at": { "type": "string", "description": "ISO-8601 timestamp" },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "primary_category", "source_platform", "viability"],
+        "properties": {
+          "name": { "type": "string" },
+          "source_platform": {
+            "type": "string",
+            "enum": ["reddit", "x"],
+            "description": "Primary surface for this candidate"
+          },
+          "source_anchor": {
+            "type": "string",
+            "description": "e.g. r/subreddit, X Community, list, or documented search pattern"
+          },
+          "url_or_id": { "type": "string" },
+          "primary_category": { "type": "string" },
+          "signals": { "type": "array", "items": { "type": "string" } },
+          "context_pack": {
+            "type": "object",
+            "properties": {
+              "recent_themes": { "type": "array", "items": { "type": "string" } },
+              "controversy_patterns": { "type": "array", "items": { "type": "string" } },
+              "popular_entities": { "type": "array", "items": { "type": "string" } },
+              "debate_topics": { "type": "array", "items": { "type": "string" } },
+              "matchup_types": { "type": "array", "items": { "type": "string" } },
+              "tone_indicators": { "type": "array", "items": { "type": "string" } },
+              "slang_or_cultural_signals": { "type": "array", "items": { "type": "string" } }
+            }
+          },
+          "viability": { "type": "string", "enum": ["viable", "uncertain", "not_viable"] },
+          "viability_reason": { "type": "string" },
+          "portfolio_tag": {
+            "type": "string",
+            "enum": ["proven_archetype", "adjacent", "experimental"]
+          }
+        }
+      }
+    }
+  }
+}

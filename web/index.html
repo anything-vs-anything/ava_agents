@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas Agents — pipeline</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f1218;
+      --surface: #181c26;
+      --border: #2a3142;
+      --text: #e8eaef;
+      --muted: #8b93a7;
+      --accent: #c4a574;
+      --reddit: #ff4500;
+      --x: #e7e9ea;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.75rem, 4vw, 2.25rem);
+      margin: 0 0 0.35rem;
+      letter-spacing: -0.02em;
+    }
+    .lede {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 40rem;
+      margin: 0 0 2rem;
+    }
+    .banner {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    .banner strong { color: var(--accent); }
+    .chain {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .chain span:not(.arrow) {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      color: var(--text);
+    }
+    .chain .arrow { color: var(--border); user-select: none; }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.15rem 1.25rem;
+      transition: border-color 0.15s ease;
+    }
+    article:hover { border-color: #3d465c; }
+    article h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    article p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    article a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    article a:hover { text-decoration: underline; }
+    .human {
+      outline: 1px dashed var(--accent);
+      outline-offset: -1px;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); }
+    .sources {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 0.2rem 0.45rem;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+    .pill-reddit { background: rgba(255, 69, 0, 0.15); color: #ff9b6b; }
+    .pill-x { background: rgba(231, 233, 234, 0.12); color: #c8ccd4; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Atlas Agents</h1>
+    <p class="lede">
+      Your agents live as <strong>Markdown prompts</strong> and a <strong>Cursor project rule</strong>.
+      This page is a visual map and opens the files from disk (relative links).
+    </p>
+
+    <div class="banner">
+      <strong>In Cursor (not a separate web app):</strong> open <code>.cursor/rules/atlas-seeding-system.mdc</code> for always-on behavior.
+      In Chat or Composer, attach <code>@agents/prompts/scout.md</code> (etc.) to run a phase.
+      <p class="sources">
+        Sources: <span class="pill pill-reddit">Reddit</span>
+        <span class="pill pill-x">X</span> — see <a href="../docs/sources.md">docs/sources.md</a>
+      </p>
+    </div>
+
+    <div class="chain" aria-label="Agent pipeline order">
+      <span>Atlas</span><span class="arrow">→</span>
+      <span>Scout</span><span class="arrow">→</span>
+      <span>Judge</span><span class="arrow">→</span>
+      <span>Context</span><span class="arrow">→</span>
+      <span>Smith</span><span class="arrow">→</span>
+      <span>Q-Gate</span><span class="arrow">→</span>
+      <span class="human">Human</span><span class="arrow">→</span>
+      <span>Sentinel</span><span class="arrow">→</span>
+      <span>Atlas</span>
+    </div>
+
+    <div class="grid">
+      <article>
+        <h2>Atlas</h2>
+        <p>Orchestration, portfolio 60/30/10, strike gates, memory.</p>
+        <a href="../agents/prompts/atlas.md">Open atlas.md</a>
+      </article>
+      <article>
+        <h2>Scout</h2>
+        <p>Discover 50–100 candidates; Reddit + X; context packs.</p>
+        <a href="../agents/prompts/scout.md">Open scout.md</a>
+      </article>
+      <article>
+        <h2>Judge</h2>
+        <p>Qualify to ~5–10; Elite / Good / Risky / Avoid.</p>
+        <a href="../agents/prompts/judge.md">Open judge.md</a>
+      </article>
+      <article>
+        <h2>Context Extractor</h2>
+        <p>Style profile, debate primitives, triggers.</p>
+        <a href="../agents/prompts/context-extractor.md">Open context-extractor.md</a>
+      </article>
+      <article>
+        <h2>Smith</h2>
+        <p>Native battle prompts; Reddit vs X formatting.</p>
+        <a href="../agents/prompts/smith.md">Open smith.md</a>
+      </article>
+      <article>
+        <h2>Quality Gate</h2>
+        <p>Validate prompts; fail with fix guidance.</p>
+        <a href="../agents/prompts/quality-gate.md">Open quality-gate.md</a>
+      </article>
+      <article class="human">
+        <h2>Human</h2>
+        <p>Only human posts. Use the review packet template.</p>
+        <a href="../agents/templates/human-review-packet.md">Open human-review-packet.md</a>
+      </article>
+      <article>
+        <h2>Sentinel</h2>
+        <p>Metrics + failure attribution after a human attempt.</p>
+        <a href="../agents/prompts/sentinel.md">Open sentinel.md</a>
+      </article>
+    </div>
+
+    <footer>
+      <p><strong>Shared context:</strong> <a href="../agents/prompts/00-platform-context.md">00-platform-context.md</a></p>
+      <p><strong>Runbook:</strong> <a href="../AGENTS.md">AGENTS.md</a> · <a href="../README.md">README.md</a></p>
+      <p>Open this file in your browser: <code>web/index.html</code> (double-click or drag into Chrome/Safari).</p>
+    </footer>
+  </div>
+</body>
+</html>
