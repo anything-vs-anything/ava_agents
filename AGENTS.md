@@ -57,3 +57,11 @@ This keeps human posting authority explicit and non-automated.
 ## Source document
 
 Canonical spec: `agentic_seeding_master_prompt_revised_final.pdf` (also summarized in `docs/agentic_seeding_master_prompt.md`).
+
+## Cursor Cloud specific instructions
+
+- **Zero external dependencies.** All Python scripts use only the standard library (Python 3.8+). There is no `requirements.txt`, `package.json`, or similar — nothing to install.
+- **Web UI.** To view the pipeline diagram, serve `web/index.html` with `python3 -m http.server 8080 --directory web` and open `http://localhost:8080/`.
+- **Lint / tests / build.** There is no formal linter, test suite, or build step. Validate correctness by running the three CLI scripts documented in `README.md` § Commands (`run_atlas_cycle.py`, `pipeline_automation.py`, `create_agent_prompt.py`).
+- **State file.** `data/state.json` tracks the current run and phase. Some runs may already exist under `data/runs/`. Use `python3 scripts/run_atlas_cycle.py new-run` to create a fresh run.
+- **Human gate.** `pipeline_automation.py advance` intentionally blocks at `human_review` until `run_atlas_cycle.py human-ok` is run. This is by design, not a bug.
